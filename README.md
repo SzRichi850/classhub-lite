@@ -85,30 +85,6 @@ Az alapértelmezett név teljesen jó amit a pull request ad.
 
 ---
 
-## Git flow
-
-feature branch
-↓
-pull request
-↓
-dev branch
-↓
-release PR
-↓
-main branch
-
----
-
-feature/login
-feature/theme
-feature/feed
-↓
-dev
-↓
-main
-
----
-
 ## Alap szabályok
 
 - nem dolgozunk közvetlenül main branch-en
@@ -123,10 +99,6 @@ main
 Ha rossz branch-en dolgozol:
 - hozz létre új branch-et dev-ből
 - vidd át a módosításokat
-
-Ha rossz commit történt:
-- git reset
-- git cherry-pick
 
 Ha rossz PR készült:
 - zárd le és nyiss újat

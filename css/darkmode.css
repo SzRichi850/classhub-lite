@@ -1,0 +1,8 @@
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .post {
+    background: #1e1e1e;
+}

@@ -7,7 +7,7 @@
     background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
     background-size: 300%;
     color:  #ffa702;
-
+    
     animation: backgroundGradientShift 5s infinite linear;
 }
 

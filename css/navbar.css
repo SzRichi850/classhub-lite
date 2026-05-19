@@ -7,7 +7,7 @@
     background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
     background-size: 300%;
     color:  #ffa702;
-    
+
     animation: backgroundGradientShift 5s infinite linear;
 }
 
@@ -42,4 +42,9 @@
     gap: 15px;
     align-items: center;
     justify-content: right;
+}
+
+@keyframes backgroundGradientShift {
+    from { background-position: 0% 0%; }
+    to {background-position: 100% 0%; }
 }

@@ -101,3 +101,31 @@ h1 {
   transform: scale(.93);
   box-shadow: none;
 }
+
+.mode-ripple {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #1a1814;
+  pointer-events: none;
+  z-index: 99;
+  animation: rippleExpand .65s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+body.dark .mode-ripple {
+  background: #f4f1eb;
+}
+
+@keyframes rippleExpand {
+  from { transform: translate(-50%, -50%) scale(0); }
+  to   { transform: translate(-50%, -50%) scale(80); }
+}
+
+body {
+  transition: background-color .3s ease .35s, color .3s ease .35s;
+}
+
+div{
+    transition: background-color .3s ease .35s, color .3s ease .35s;
+}

@@ -32,9 +32,9 @@ Backend nincs, minden adat frontend oldalon (localStorage vagy statikus adatok).
 
 A projekt a következő branch struktúrát használja:
 
-main → stabil, kész verzió
-dev → fejlesztési ág
-feature/* → új funkciók
+- main → stabil, kész verzió
+- dev → fejlesztési ág
+- feature/* → új funkciók
 ---
 
 ## Fejlesztési folyamat
@@ -55,18 +55,18 @@ Ha egy verzió elkészült:
 dev → main merge
 
 Verziók például:
-v0.1 alap UI
-v0.2 interaktív funkciók
-v1.0 kész projekt
+- v0.1 alap UI
+- v0.2 interaktív funkciók
+- v1.0 kész projekt
 
 ---
 
 ## Commit szabályok
 
-feat: új funkció
-fix: hiba javítása
-style: kinézet módosítás
-docs: dokumentáció
+- feat: új funkció
+- fix: hiba javítása
+- style: kinézet módosítás
+- docs: dokumentáció
 
 ---
 

@@ -42,7 +42,7 @@ div {
 }
 
 /* FADEIN - diveknek */
-.fadein {
+div {
     animation: fadein 2s;
 }
 
@@ -52,7 +52,7 @@ div {
 }
 
 /* SLIDEINRIGHT - h1-nek */
-.slideInRight {
+h1 {
     animation: slideInRight 2s ease-out;
 }
 

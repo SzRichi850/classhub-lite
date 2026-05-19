@@ -17,3 +17,24 @@
     flex-direction: row;
     flex-wrap: wrap;
   }}
+.doboz {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .doboz {
+    padding: 40px;
+    margin-bottom: 60px;
+  }
+}
+.galeria {
+  display: flex;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    gap: 32px;
+  }
+}

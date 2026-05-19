@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     padding: 15px 20px;
     background: #222;
     color:  rgb(255, 167, 2);
@@ -12,6 +12,7 @@
     display: flex;
     gap: 20px;
     list-style: none;
+    justify-content: center;
 }
 
 .navbar a {
@@ -23,4 +24,5 @@
     display: flex;
     gap: 15px;
     align-items: center;
+    justify-content: right;
 }

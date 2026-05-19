@@ -24,15 +24,11 @@
     >*:hover {
         font-size: 1.5em;
         font-weight: bold;
-        .active {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
     }
 }
 
 .activepage {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 

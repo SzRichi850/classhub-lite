@@ -36,6 +36,24 @@ main {
     cursor: pointer;
 }
 
+
+div {
+    animation: fadein 2s;  /* 2 mp-es fade in betöltéskor */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }   /* kezdet: láthatatlan */
+    to   { opacity: 1; }   /* vége: látható */
+}
+
+
+
+
+
+
+
+
+
 .like-btn {
   display: inline-flex;
   align-items: center;

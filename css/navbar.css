@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     
-    padding: 15px 20px;
+ padding: 15px 20px;
     background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
     background-size: 300%;
     color:  #ffa702;
@@ -37,7 +37,7 @@
 }
 
 .navbar a {
-    color: #ffa702;
+    color: rgb(255, 167, 2);
     text-decoration: none;
 }
 
@@ -46,12 +46,4 @@
     gap: 15px;
     align-items: center;
     justify-content: right;
-}
-#darkModeBtn {
-    background: #222;
-}
-
-@keyframes backgroundGradientShift {
-    0% { background-position: 0% 0%; }
-	100% { background-position: 100% 0%; }
 }

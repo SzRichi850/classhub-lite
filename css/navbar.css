@@ -19,9 +19,18 @@
         transition: font-size 0.4s, font-weight 0.4s;
     }
     >*:hover {
-        font-size: 1.5rem;
+        font-size: 1.5em;
         font-weight: bold;
+        .active {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
     }
+}
+
+.activepage {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .navbar a {

@@ -1,7 +1,9 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: absolute;
+    > ul {
+        align-items: absolute;
+    }
 
     padding: 15px 20px;
     background: #222;

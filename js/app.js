@@ -1,6 +1,6 @@
 const mediaQuery = window.matchMedia('(max-width: 768px)');
-const fomenu = document.querySelector('.fomenu');
-const button = document.querySelector('.button'); 
+const fomenu = document.querySelector('.navbar ul');
+const button = document.querySelector('#hamburger'); 
 const navbar = document.querySelector('.navbar');
 const DarkB = document.querySelector('.darkModeBtn')
 const h1 = document.querySelector('.h1')
@@ -38,7 +38,7 @@ function KepernyoValtozas(e) {
     fomenu.style.display = 'flex';
     fomenu.style.flexDirection = 'column';
     fomenu.style.width = '100%';
-    fomenu.style.paddingTop = '60px'; 
+    fomenu.style.paddingTop = '0px'; 
     fomenu.style.textAlign = 'left';  
     fomenu.style.maxHeight = '0px';    
     fomenu.style.opacity = '0';

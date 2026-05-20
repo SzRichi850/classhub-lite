@@ -2,14 +2,19 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/navbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - ClassHub Lite</title>
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/darkmode.css">
-    <title>Profil</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
+
 <body>
-    <nav class="navbar">
+
+<nav class="navbar">
     <h1 class="slideIn">ClassHub Lite</h1>
 
     <ul>
@@ -26,17 +31,40 @@
     </div>
 </nav>
 
-<main>
+<main class="profile-wrapper">
 
-<h1>Profil oldal</h1>
+    <div class="profile-card">
 
-<div class="post">
-    <h2>Név: Teszt Elek</h2>
-    <p>Osztály: 12.A</p>
-    <p>Kedvenc tantárgy: Informatika</p>
-</div>
+        <div class="avatar"></div>
+
+        <h2 contenteditable="true" id="name">Név: </h2>
+        
+        <p contenteditable="true" id="role">Nem:</p>
+
+        <div class="divider"></div>
+
+        <h3>Rólam</h3>
+        <p contenteditable="true" id="bio">
+           Bemutatkozás:
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Statisztika</h3>
+        <p contenteditable="true" id="projects"> </p>
+        <p contenteditable="true" id="skills"></p>
+        <p contenteditable="true" id="motivation"></p>
+
+        <div class="divider"></div>
+
+        <button class="like-btn" onclick="saveProfile()">🖫 Mentés</button>
+
+    </div>
 
 </main>
+
+<script src="js/profile.js"></script>
 <script src="js/darkmode.js"></script>
+
 </body>
 </html>

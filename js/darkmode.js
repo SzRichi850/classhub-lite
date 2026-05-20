@@ -2,7 +2,7 @@ const darkModeBtn = document.getElementById("darkModeBtn");
 
 darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
-});
+},80);
 
 const btn = document.getElementById('darkModeBtn');
 

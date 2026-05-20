@@ -2,74 +2,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     padding: 15px 20px;
-    background: #222;
-    color: white;
+    background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
+    background-size: 300%;
+    color:  #ffffff;
+
+    animation: backgroundGradientShift 5s infinite linear;
 }
 
 .navbar ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    justify-content: center;
+    align-items: end;
+
+    >* {
+        transition: font-size 0.4s, font-weight 0.4s;
+    }
+    >*:hover {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+} 
+
+.activepage {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .navbar a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-#hamburger {
-    display: none;
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0;
+#darkModeContainer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
 }
-@media (max-width: 768px){
-    #hamburger {
-        display: block;
-    }
-   #nav_icon span:nth-child(1){
-    top: 0px;
-   }
 
-   #nav_icon span:nth-child(2), #nav_icon span:nth-child(3) {
-    top: 18px;
-   }
-   #nav_icon span:nth-child(4){
-    top: 36px;
-   }
-
-   #nav_icon.open span:nth-child(1){
-        top: 18px;
-        width: 0%;
-        left: 50%;
-   }
-   #nav_icon.open span:nth-child(2){
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    #nav_icon.open span:nth-child(3){
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-    #nav_icon.open span:nth-child(4){
-        top: 18px;
-        width: 0%;
-        left: 50%;
-    }
-    
-    .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #ff7402;
-    transition: all 0.3s ease-in-out;
-    }
+@keyframes backgroundGradientShift {
+    from { background-position: 0% 0%; }
+    to {background-position: 100% 0%; }
 }

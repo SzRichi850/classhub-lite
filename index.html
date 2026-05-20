@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,52 +11,55 @@
     <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <h1 class="slideIn">ClassHub Lite</h1>
+        <ul>
+            <li><a href="index.html" class="activepage">Főoldal</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="gallery.html">Galéria</a></li>
+            <li><a href="events.html">Események</a></li>
+            <li><a href="timetable.html">Órarend</a></li>
+        </ul>
+        <div id="nav_icon">
+            <button id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        </div>
+        <div id="darkModeContainer">
+            <p>Dark Mode</p>
+            <button id="darkModeBtn">🌙</button>
+        </div>
+    </nav>
 
-<nav class="navbar">
-    <h1 class="slideIn">ClassHub Lite</h1>
+    <main>
+        <section class="hero">
+            <h2>Üdv a ClassHub Lite oldalon!</h2>
+            <p>Az osztály közös webprojektje.</p>
+        </section>
 
-    <ul>
-        <li><a href="index.html" class="activepage">Főoldal</a></li>
-        <li><a href="profile.html">Profil</a></li>
-        <li><a href="gallery.html">Galéria</a></li>
-        <li><a href="events.html">Események</a></li>
-        <li><a href="timetable.html">Órarend</a></li>
-    </ul>
+        <section class="posts">
 
-    <div id="darkModeContainer">
-        <p>Dark Mode</p>
-        <button id="darkModeBtn">🌙</button>
-    </div>
-</nav>
+            <div class="post">
+                <h3>Osztálykirándulás</h3>
+                <p>Pénteken indulunk 8:00-kor.</p>
+                <button class="like-btn">❤️ Like</button>
+            </div>
 
-<main>
-
-<section class="hero">
-    <h2>Üdv a ClassHub Lite oldalon!</h2>
-    <p>Az osztály közös webprojektje.</p>
-</section>
-
-<section class="posts">
-
-    <div class="post">
-        <h3>Osztálykirándulás</h3>
-        <p>Pénteken indulunk 8:00-kor.</p>
-        <button class="like-btn">❤️ Like</button>
-    </div>
-
-    <div class="post">
-        <h3>Matek doga</h3>
-        <p>Ne felejtsétek el a holnapi dolgozatot.</p>
-        <button class="like-btn">❤️ Like</button>
-    </div>
-
-</section>
-
-</main>
-
-<script src="js/darkmode.js"></script>
-<script src="js/posts.js"></script>
-<script src="./js//menu.js"></script>
+            <div class="post">
+                <h3>Matek doga</h3>
+                <p>Ne felejtsétek el a holnapi dolgozatot.</p>
+                <button class="like-btn">❤️ Like</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/darkmode.js"></script>
+    <script src="js/posts.js"></script>
+    <script src="./js//menu.js"></script>
 </body>
+
 </html>

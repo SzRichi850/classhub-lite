@@ -9,6 +9,7 @@ body {
     background: #0b0c10;
     color: #c5c6c7;
     line-height: 1.6;
+    transition: background-color .3s ease .35s, color .3s ease .60s;
 }
 
 main {
@@ -25,6 +26,28 @@ h1 {
     letter-spacing: 2px;
     text-shadow: 0 0 10px rgba(102, 252, 241, 0.4);
     margin-bottom: 30px;
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+div {
+    animation: fadein 2s;
+    transition: background-color .3s ease .35s, color .3s ease .60s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .post {
@@ -68,6 +91,9 @@ h1 {
 
 .like-btn {
     margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 10px 25px;
     cursor: pointer;
     background-color: transparent;
@@ -78,15 +104,39 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: background .22s ease, color .22s ease,
+                transform .18s cubic-bezier(.4,0,.2,1), box-shadow .22s ease;
 }
 
 .like-btn:hover {
     background-color: #66fcf1;
     color: #0b0c10;
     box-shadow: 0 0 15px #66fcf1;
+    transform: translateY(-3px);
 }
 
 .like-btn:active {
     transform: scale(0.95);
+    box-shadow: none;
+}
+
+.mode-ripple {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: black;
+    pointer-events: none;
+    z-index: 99;
+    animation: rippleExpand 1s cubic-bezier(1,0,.2,1) forwards;
+}
+
+body.dark .mode-ripple {
+    background: #f4f1eb;
+}
+
+@keyframes rippleExpand {
+    0%   { transform: translate(-50%, -50%) scale(0); }
+    70%  { transform: translate(-50%, -50%) scale(100); }
+    100% { transform: translate(-50%, -50%) scale(100); opacity: 0; }
 }

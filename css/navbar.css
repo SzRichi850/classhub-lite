@@ -2,19 +2,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     padding: 15px 20px;
-    background: #222;
-    color: white;
+    background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
+    background-size: 300%;
+    color:  #ffffff;
+
+    animation: backgroundGradientShift 5s infinite linear;
 }
 
 .navbar ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    justify-content: center;
+    align-items: end;
+
+    >* {
+        transition: font-size 0.4s, font-weight 0.4s;
+    }
+    >*:hover {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+} 
+
+.activepage {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .navbar a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+}
+
+#darkModeContainer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
+}
+
+@keyframes backgroundGradientShift {
+    from { background-position: 0% 0%; }
+    to {background-position: 100% 0%; }
 }

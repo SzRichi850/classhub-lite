@@ -1,0 +1,76 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+ 
+    animation: fadein 1.2s;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #000000;
+    margin: 0 auto 15px auto;
+}
+
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+[contenteditable="true"] {
+    outline: none;
+    border-bottom: 1px dashed transparent;
+    transition: 0.2s;
+}
+
+[contenteditable="true"]:hover {
+    border-bottom: 1px dashed #aaa;
+}
+
+[contenteditable="true"]:focus {
+    border-bottom: 1px solid #222;
+}
+
+
+.like-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 99px;
+    border: 1.5px solid #222;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.like-btn:hover {   
+    background: #555;
+    color: white;
+}
+
+/* dark mode support */
+body.dark .profile-card {
+    background: #363636;
+    color: #eee;
+}
+
+body.dark .divider {
+    background: #333;
+}
+
+body.dark [contenteditable="true"]:focus {
+    border-bottom: 1px solid #eee;
+}

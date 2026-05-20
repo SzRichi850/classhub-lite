@@ -1,3 +1,7 @@
+h1{font-size:Clamp(1.4rem,4vw,1.8rem)}
+h2{font-size:Clamp(1.2rem,3vw,1.6rem)}
+h3{font-size:Clamp(1rem,2.5vw,1.4rem)}
+p{font-size:Clamp(0.8rem,2vw,1rem)}
 @media (max-width: 768px) {
 
     .navbar {
@@ -10,4 +14,41 @@
         align-items: center;
     }
 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.doboz {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .doboz {
+    padding: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+.galeria {
+  display: flex;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .galeria {
+    gap: 32px;
+  }
 }

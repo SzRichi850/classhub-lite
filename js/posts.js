@@ -1,7 +1,9 @@
 const likeButtons = document.querySelectorAll(".like-btn");
 
-const like = document.getElementById(like).innerHTML = like_count;
+const like = document.getElementById(like);
 let like_count = 0;
+
+
 
 likeButtons.forEach(button => {
 
@@ -14,6 +16,7 @@ likeButtons.forEach(button => {
         if (liked) {
             button.textContent = "💖 Liked";
             like_count += 1; 
+            like.innerHTML = like_count
         } 
         else {
             button.textContent = "❤️ Like";

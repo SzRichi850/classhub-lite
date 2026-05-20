@@ -11,7 +11,6 @@ body {
 }
 
 main {
-    
 }
 
 .hero {
@@ -36,23 +35,21 @@ main {
     cursor: pointer;
 }
 
-
 div {
-    animation: fadein 2s;  /* 2 mp-es fade in betöltéskor */
-}
-
-/* FADEIN - diveknek */
-div {
-    animation: fadein 2s;
+    animation: fadein 2s; /* 2 mp-es fade in betöltéskor */
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* SLIDEINRIGHT - h1-nek */
-h1 {
+/* slide in (only on title) */
+.slideIn {
     animation: slideInRight 0.5s ease-out;
 }
 
@@ -67,65 +64,68 @@ h1 {
     }
 }
 
-
-
-
-
-
 .like-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border-radius: 99px;
-  border: 1.5px solid var(--accent);
-  background: transparent;
-  color: var(--accent);
-  font-size: .88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background .22s ease,
-    color .22s ease,
-    transform .18s cubic-bezier(.4,0,.2,1),
-    box-shadow .22s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 99px;
+    border: 1.5px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.22s ease,
+        color 0.22s ease,
+        transform 0.18s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.22s ease;
 }
 
 .like-btn:hover {
-  background: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(212,82,42,.28);
+    background: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(212, 82, 42, 0.28);
 }
 
 .like-btn:active {
-  transform: scale(.93);
-  box-shadow: none;
+    transform: scale(0.93);
+    box-shadow: none;
 }
 
 .mode-ripple {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #1a1814;
-  pointer-events: none;
-  z-index: 99;
-  animation: rippleExpand .65s cubic-bezier(.4,0,.2,1) forwards;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1a1814;
+    pointer-events: none;
+    z-index: 99;
+    animation: rippleExpand 0.65s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 body.dark .mode-ripple {
-  background: #f4f1eb;
+    background: #f4f1eb;
 }
 
 @keyframes rippleExpand {
-  from { transform: translate(-50%, -50%) scale(0); }
-  to   { transform: translate(-50%, -50%) scale(80); }
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(80);
+    }
 }
 
 body {
-  transition: background-color .3s ease .35s, color .3s ease .35s;
+    transition:
+        background-color 0.3s ease 0.35s,
+        color 0.3s ease 0.35s;
 }
 
-div{
-    transition: background-color .3s ease .35s, color .3s ease .35s;
+div {
+    transition:
+        background-color 0.3s ease 0.35s,
+        color 0.3s ease 0.35s;
 }

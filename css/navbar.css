@@ -6,7 +6,7 @@
     padding: 15px 20px;
     background: linear-gradient(90deg,#222 0%, #555 33%, #222 66%, #555 100%);
     background-size: 300%;
-    color:  #ffa702;
+    color:  #ffffff;
 
     animation: backgroundGradientShift 5s infinite linear;
 }
@@ -25,7 +25,7 @@
         font-size: 1.5em;
         font-weight: bold;
     }
-}
+} 
 
 .activepage {
     font-size: 1.3em;
@@ -33,7 +33,7 @@
 }
 
 .navbar a {
-    color: rgb(255, 167, 2);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 

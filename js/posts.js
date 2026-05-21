@@ -4,22 +4,20 @@ const posts = [
     { title: "vodafone", content: "GYERE A VODAFONHOZZZZZZ", like: 0 },
     { title: "telefon", content: "JKSDAFBKAEDSHGFUHELD.", like: 0 },
     { title: "pedomaci", content: "eljon erted", like: 0 },
-    { title: "spongyabob", content: "NEM HALLOMMMMM!", like: 0  }
+    { title: "spongyabob", content: "NEM HALLOMMMMM!", like: 0 }
 ];
 
-localStorage.setItem("posts", JSON.stringify(posts))
+localStorage.setItem("posts", JSON.stringify(posts));
 
-let posztok = JSON.parse(localStorage.getItem("posts"))
-console.log(posztok)
+let posztok = JSON.parse(localStorage.getItem("posts"));
 
 const postsSection = document.querySelector(".posts");
 
 posztok.forEach((post, index) => {
-    
+
     const postDiv = document.createElement("div");
     postDiv.classList.add("post");
 
-    
     postDiv.innerHTML = `
         <h3 class="title">${post.title}</h3>
         <p class="content">${post.content}</p>
@@ -27,14 +25,12 @@ posztok.forEach((post, index) => {
         <p class="like">0</p>
     `;
 
-   
     postsSection.appendChild(postDiv);
 
-   
     const likeBtn = postDiv.querySelector(".like-btn");
     const likeCounter = postDiv.querySelector(".like");
     let liked = false;
-    let like_count = 0;
+    let like_count = posztok[index].like;
 
     likeBtn.addEventListener("click", () => {
         liked = !liked;
@@ -46,12 +42,9 @@ posztok.forEach((post, index) => {
             likeBtn.textContent = "❤️ Like";
             like_count -= 1;
         }
-        localStorage.setItem(post);
 
+        posztok[index].like = like_count;
+        localStorage.setItem("posts", JSON.stringify(posztok));
         likeCounter.innerHTML = like_count;
-        console.log(like_count);
     });
 });
-
-/*JSON.stringify(localStorage.setItem("elso", [1, 2, 3, 4, 5, 6, 7, 78, 8, 10]))
-console.log(JSON.parse(localStorage.getItem("elso")))*/

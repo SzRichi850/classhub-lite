@@ -144,3 +144,11 @@ div {
     justify-content: center;
     padding: 40px 20px;
 } 
+
+#cim, #alcim {
+    margin: 20px;
+}
+
+.posts {
+    margin: 20px;
+}

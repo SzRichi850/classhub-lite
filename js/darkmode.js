@@ -15,6 +15,30 @@ darkModeBtn.addEventListener('click', () => {
   document.body.appendChild(ripple);
   document.body.classList.toggle('dark');
 
-  setTimeout(() => ripple.remove(), 650);
+    setTimeout(() => ripple.remove(), 650);
 });
 
+const themesContainer = document.querySelector("#theme_container");
+const switchHighlight = document.querySelector("#slider_highlight");
+
+const whitePos = document.querySelector("#theme_default");
+const darkPos = document.querySelector("#theme_dark");
+const neonPos = document.querySelector("#theme_neon");
+const retroPos = document.querySelector("#theme_retro");
+const matrixPos = document.querySelector("#theme_matrix");
+const arcticPos = document.querySelector("#theme_arctic");
+
+function updateSwitchPos(newPosX, newPosY){
+  switchHighlight.style.left = newPosX+"px";
+  switchHighlight.style.top = newPosY+"px";
+}
+
+let themes = [whitePos, darkPos, neonPos, retroPos, matrixPos, arcticPos];
+themes.forEach(element => {
+  element.addEventListener("click", (e) => {
+    let pos = element.getBoundingClientRect();
+    updateSwitchPos(pos.left-5, pos.top);
+  });
+});
+
+updateSwitchPos(whitePos.left, whitePos.top);

@@ -10,9 +10,6 @@ body {
     color: #222;
 }
 
-main {
-}
-
 .hero {
     margin-bottom: 30px;
 }
@@ -36,12 +33,7 @@ main {
 }
 
 div {
-    animation: fadein 2s;
-}
-
-
-div {
-    animation: fadein 2s;
+    animation: fadein 1s;
 }
 
 @keyframes fadein {

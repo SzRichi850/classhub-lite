@@ -17,3 +17,4 @@ darkModeBtn.addEventListener('click', () => {
 
   setTimeout(() => ripple.remove(), 650);
 });
+

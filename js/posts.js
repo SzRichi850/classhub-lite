@@ -6,7 +6,7 @@ const posts = [
 const postsSection = document.querySelector(".posts");
 
 posts.forEach((post, index) => {
-    // Post div létrehozása
+    
     const postDiv = document.createElement("div");
     postDiv.classList.add("post");
 
@@ -18,10 +18,10 @@ posts.forEach((post, index) => {
         <p class="like">0</p>
     `;
 
-    // Hozzáadás a DOM-hoz
+   
     postsSection.appendChild(postDiv);
 
-    // Like logika
+   
     const likeBtn = postDiv.querySelector(".like-btn");
     const likeCounter = postDiv.querySelector(".like");
     let liked = false;

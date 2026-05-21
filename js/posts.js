@@ -21,8 +21,8 @@ posztok.forEach((post, index) => {
 
     
     postDiv.innerHTML = `
-        <h3>${post.title}</h3>
-        <p>${post.content}</p>
+        <h3 class="title">${post.title}</h3>
+        <p class="content">${post.content}</p>
         <button class="like-btn">❤️ Like</button>
         <p class="like">0</p>
     `;

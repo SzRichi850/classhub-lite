@@ -1,0 +1,67 @@
+body {
+    background: #2e3440;
+    color: #d8dee9;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* NAVBAR - clean KDE bar */
+.navbar {
+    background: rgba(46, 52, 64, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #3b4252;
+}
+
+.navbar h1 {
+    color: #88c0d0;
+}
+
+/* LINKS */
+.navbar ul li a {
+    color: #d8dee9;
+    transition: 0.2s ease;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.navbar ul li a:hover {
+    background: #3b4252;
+    color: #88c0d0;
+}
+
+.activepage {
+    color: #88c0d0;
+    border-bottom: 2px solid #88c0d0;
+}
+
+/* HERO */
+.hero h2 {
+    color: #88c0d0;
+}
+
+/* POSTS */
+.post {
+    background: #3b4252;
+    border: 1px solid #434c5e;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.post:hover {
+    border-color: #88c0d0;
+    transform: translateY(-2px);
+}
+
+/* BUTTON */
+.like-btn {
+    background: transparent;
+    border: 1px solid #88c0d0;
+    color: #d8dee9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.like-btn:hover {
+    background: #88c0d0;
+    color: #2e3440;
+}

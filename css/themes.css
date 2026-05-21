@@ -7,6 +7,45 @@
     background: #1e1e1e;
 }
 
+.northickde-mode {
+    background: #17153B;
+    color: white;
+}
+
+.northickde-mode .post {
+    background: #433D8B;
+}
+
+neon-mode {
+    background: #1D2B53;
+    color: #fff;
+}
+neon-mode .post {
+    background: #7E2553;
+}
+
+.retro-mode {
+    background: #ffae01;
+    color: #333;
+}
+.retro-mode .post {
+    background: #ff8f66;
+}
+
+.matrix-mode {
+    background: #0f0f0f;
+    color: #00ff00;
+}
+.matrix-mode .post {
+    background: #0a0a0a;
+}
+.normal-mode {
+    background: #f0f0f0;
+    color: #000000;
+}
+.normal-mode .post {
+    background: #ffffff;
+}
 .themeSlider {
     display: flex;
     align-items: center;

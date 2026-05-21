@@ -1,11 +1,20 @@
 const posts = [
-    { title: "Osztálykirándulás", content: "Pénteken indulunk 8:00-kor." },
-    { title: "Matek doga", content: "Ne felejtsétek el a holnapi dolgozatot." }
+    { title: "Osztálykirándulás", content: "Pénteken indulunk 8:00-kor.", like: 0 },
+    { title: "Cooking recipe ", content: "izraeli steak", like: 0 },
+    { title: "vodafone", content: "GYERE A VODAFONHOZZZZZZ", like: 0 },
+    { title: "telefon", content: "JKSDAFBKAEDSHGFUHELD.", like: 0 },
+    { title: "pedomaci", content: "eljon erted", like: 0 },
+    { title: "spongyabob", content: "NEM HALLOMMMMM!", like: 0  }
 ];
+
+localStorage.setItem("posts", JSON.stringify(posts))
+
+let posztok = JSON.parse(localStorage.getItem("posts"))
+console.log(posztok)
 
 const postsSection = document.querySelector(".posts");
 
-posts.forEach((post, index) => {
+posztok.forEach((post, index) => {
     
     const postDiv = document.createElement("div");
     postDiv.classList.add("post");
@@ -37,8 +46,12 @@ posts.forEach((post, index) => {
             likeBtn.textContent = "❤️ Like";
             like_count -= 1;
         }
+        localStorage.setItem(post);
 
         likeCounter.innerHTML = like_count;
         console.log(like_count);
     });
 });
+
+/*JSON.stringify(localStorage.setItem("elso", [1, 2, 3, 4, 5, 6, 7, 78, 8, 10]))
+console.log(JSON.parse(localStorage.getItem("elso")))*/

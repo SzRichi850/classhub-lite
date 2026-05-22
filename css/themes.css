@@ -1,31 +1,30 @@
-.dark-mode {
+.theme_dark {
     background: #121212;
     color: white;
 
-    > .post {
-    background: #1e1e1e;
 }
+.theme_dark .post {
+background: #1e1e1e;
 }
 
-.northickde-mode {
+.theme_arctic {
     background: #17153B;
     color: white;
 
-    > .post {
+}
+.theme_arctic .post {
     background: #433D8B;
 }
-}
 
-
-
-neon-mode {
+.theme_neon {
     background: #1D2B53;
     color: #fff;
 
-    > .post {
+}
+.theme_neon .post {
     background: #7E2553;
 }
-}
+
 .retro-mode {
     background-color: #ffae01;
     color: #333;
@@ -39,20 +38,23 @@ neon-mode {
     background: #ff8f66;
 }
 
-.matrix-mode {
+.theme_matrix {
     background: #0f0f0f;
     color: #00ff00;
 
-    > .post {
-        background: #0a0a0a;
-    }
 }
-.normal-mode {
+.theme_matrix .post {
+    background: #0a0a0a;
+}
+
+.theme_default {
     background: #f0f0f0;
     color: #000000;
- .post {
+}
+.theme_default .post {
     background: #ffffff;
 }
+
 .themeSlider {
     display: flex;
     align-items: center;
@@ -87,4 +89,4 @@ neon-mode {
     transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
     z-index: 1;
     box-shadow: 0 5px 15px rgba(110, 37, 145, 0.5);
-}}
+}

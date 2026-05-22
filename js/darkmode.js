@@ -15,7 +15,7 @@ darkModeBtn.addEventListener('click', () => {
   document.body.appendChild(ripple);
   document.body.classList.toggle('dark');
 
-    setTimeout(() => ripple.remove(), 650);
+  setTimeout(() => ripple.remove(), 650);
 });
 
 const themesContainer = document.querySelector("#theme_container");
@@ -37,6 +37,8 @@ let themes = [whitePos, darkPos, neonPos, retroPos, matrixPos, arcticPos];
 themes.forEach(element => {
   element.addEventListener("click", (e) => {
     let pos = element.getBoundingClientRect();
+    document.body.className = ""; // empty all themes from body
+    document.body.classList.add(element.id);
     updateSwitchPos(pos.left-5, pos.top);
   });
 });

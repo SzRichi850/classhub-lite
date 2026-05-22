@@ -12,19 +12,17 @@
     color: white;
 
     > .post {
-    background: #433D8B;
+        background: #433D8B;
+    }
 }
-}
-
-
 
 neon-mode {
     background: #1D2B53;
     color: #fff;
 
     > .post {
-    background: #7E2553;
-}
+        background: #7E2553;
+    }
 }
 .retro-mode {
     background: #ffae01;
@@ -46,9 +44,11 @@ neon-mode {
 .normal-mode {
     background: #f0f0f0;
     color: #000000;
- .post {
-    background: #ffffff;
+    .post {
+        background: #ffffff;
+    }
 }
+
 .themeSlider {
     display: flex;
     align-items: center;
@@ -83,4 +83,4 @@ neon-mode {
     transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
     z-index: 1;
     box-shadow: 0 5px 15px rgba(110, 37, 145, 0.5);
-}}
+}

@@ -15,7 +15,7 @@ darkModeBtn.addEventListener('click', () => {
   document.body.appendChild(ripple);
   document.body.classList.toggle('dark');
 
-    setTimeout(() => ripple.remove(), 650);
+  setTimeout(() => ripple.remove(), 650);
 });
 
 const themesContainer = document.querySelector("#theme_container");

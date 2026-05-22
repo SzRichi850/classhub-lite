@@ -52,3 +52,16 @@ window.addEventListener("resize", () => {
 });
 
 updateSwitchPos(white);
+
+//--------------------------------------------------------------------
+const img = document.createElement("groovy");
+
+img.src = "css/groovy.png";
+img.alt = "groovy image";
+
+// optional styling
+img.style.width = "300px";
+img.style.borderRadius = "10px";
+img.classList.add("groovy-image");
+
+document.getElementById("groovycontainer").appendChild(img);

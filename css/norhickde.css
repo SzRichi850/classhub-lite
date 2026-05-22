@@ -1,8 +1,8 @@
-body {
+/* body {
     background: #2e3440;
     color: #d8dee9;
     font-family: "Segoe UI", system-ui, sans-serif;
-}
+} */
 
 /* NAVBAR - clean KDE bar */
 .navbar {
@@ -38,18 +38,16 @@ body {
     color: #88c0d0;
 }
 
-/* POSTS */
-.post {
+/* .post {
     background: #3b4252;
     border: 1px solid #434c5e;
     border-radius: 12px;
     transition: 0.2s ease;
-}
-
-.post:hover {
+} */
+/* .post:hover {
     border-color: #88c0d0;
     transform: translateY(-2px);
-}
+} */
 
 /* BUTTON */
 .like-btn {

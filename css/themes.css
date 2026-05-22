@@ -24,18 +24,21 @@ background: #1e1e1e;
 .theme_neon .post {
     background: #7E2553;
 }
-
 .theme_retro {
-    background-color: #000000;
+    background-color: #c76c6c;
     color: #333;
-    background-image: url("css/crinkle.png");
+
+    background-image: url("crinkle.jpg");
     background-repeat: repeat;
-    background-size: cover;
-}
-.retro-mode .post {
-    background: #ff8f66;
+    background-size: cover  ;
+
+    position: relative;
+    z-index: 1;
 }
 
+.theme_retro .post {
+    background: #a0700a;
+}
 .theme_matrix {
     background: #0f0f0f;
     color: #00ff00;

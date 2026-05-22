@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <title>ClassHub Lite - Órarend Betöltése...</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="slideIn">ClassHub Lite</h1>
+    <ul>
+        <li><a href="sk-index.html">Főoldal</a></li>
+        <li><a href="sk-profile.html">Profil</a></li>
+        <li><a href="sk-gallery.html">Galéria</a></li>
+        <li><a href="sk-events.html">Események</a></li>
+        <li><a href="sk-timetable.html" class="activepage">Órarend</a></li>
+    </ul>
+        <div id="darkModeContainer">
+            <p>Dark Mode</p>
+            <button id="darkModeBtn">🌙</button>
+        </div>
+    </nav>
+
+    <main class="timetable-wrapper">
+        <div class="skeleton skeleton-page-title"></div>
+
+        <div class="timetable-grid">
+            <div class="timetable-column">
+                <div class="skeleton skeleton-day"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class short"></div>
+                <div class="skeleton skeleton-class"></div>
+            </div>
+
+            <!-- Kedd -->
+            <div class="timetable-column">
+                <div class="skeleton skeleton-day"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class short"></div>
+                <div class="skeleton skeleton-class"></div>
+            </div>
+
+            <!-- Szerda -->
+            <div class="timetable-column">
+                <div class="skeleton skeleton-day"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class short"></div>
+            </div>
+            
+            <!-- Csütörtök -->
+            <div class="timetable-column">
+                <div class="skeleton skeleton-day"></div>
+                <div class="skeleton skeleton-class short"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class"></div>
+            </div>
+
+            <!-- Péntek -->
+            <div class="timetable-column">
+                <div class="skeleton skeleton-day"></div>
+                <div class="skeleton skeleton-class"></div>
+                <div class="skeleton skeleton-class short"></div>
+            </div>
+        </div>
+    </main>
+                    <div class="loader-container">
+    <div class="loader"></div>
+    </div>
+
+    <script src="js/darkmode.js"></script>
+</body>
+<script>
+    setTimeout(() => {
+        window.location.href = "timetable.html";
+    }, 3000);
+</script>
+</html>

@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassHub Lite</title>
+    <title>ClassHub Lite - Betöltés...</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <link rel="stylesheet" href="css/skeleton.css">
 </head>
 
 <body>
@@ -39,29 +41,40 @@
     <main>
 
         <section class="hero">
-            <h2>Üdv a ClassHub Lite oldalon!</h2>
-            <p>Az osztály közös webprojektje.</p>
+            <!-- Skeleton Hero szövegek -->
+            <div class="skeleton skeleton-hero-title"></div>
+            <div class="skeleton skeleton-hero-text"></div>
         </section>
 
         <section class="posts">
-
             <div class="post">
-                <h3>Osztálykirándulás</h3>
-                <p>Pénteken indulunk 8:00-kor.</p>
-                <button class="like-btn">❤️ Like</button>
+                <div class="skeleton skeleton-post-title"></div>
+                <div class="skeleton skeleton-post-text"></div>
+                <div class="skeleton skeleton-post-text short"></div>
+                <div class="skeleton skeleton-button"></div>
             </div>
 
             <div class="post">
-                <h3>Matek doga</h3>
-                <p>Ne felejtsétek el a holnapi dolgozatot.</p>
-                <button class="like-btn">❤️ Like</button>
+                <div class="skeleton skeleton-post-title"></div>
+                <div class="skeleton skeleton-post-text"></div>
+                <div class="skeleton skeleton-post-text short"></div>
+                <div class="skeleton skeleton-button"></div>
             </div>
         </section>
     </main>
+                <div class="loader-container">
+    <div class="loader"></div>
+    </div>
+
     <script src="js/darkmode.js"></script>
     <script src="js/posts.js"></script>
     <script src="js/app.js"></script>
-    <script src="./js//menu.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
+<script>
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 3000);
+</script>
 
 </html>

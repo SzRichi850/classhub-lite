@@ -1,50 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
+// const darkModeBtn = document.getElementById('darkModeBtn');
+// darkModeBtn.addEventListener('click', () => {
+//   document.body.classList.toggle("dark-mode");
+//   const isDark = document.body.classList.contains('dark');
 
-  var themesContainer = document.querySelector("#theme_container");
-  var switchHighlight = document.querySelector("#slider_highlight");
+//   const ripple = document.createElement('div');
+//   ripple.className = 'mode-ripple';
+//   ripple.style.background = isDark ? '#f4f1eb' : '#1a1814';
 
-  var themes = [
-    document.querySelector("#theme_default"),
-    document.querySelector("#theme_dark"),
-    document.querySelector("#theme_neon"),
-    document.querySelector("#theme_retro"),
-    document.querySelector("#theme_matrix"),
-    document.querySelector("#theme_arctic")
-  ];
+//   const rect = darkModeBtn.getBoundingClientRect();
+//   ripple.style.top = rect.top + rect.height / 2 + 'px';
+//   ripple.style.left = rect.left + rect.width / 2 + 'px';
 
-  var themeClassList = [
-    "theme_default",
-    "theme_dark",
-    "theme_neon",
-    "theme_retro",
-    "theme_matrix",
-    "theme_arctic"
-  ];
+//   document.body.appendChild(ripple);
+//   document.body.classList.toggle('dark');
 
-  function updateSwitchPos(el) {
-    if (!themesContainer || !switchHighlight || !el) return;
+//   setTimeout(() => ripple.remove(), 650);
+// });
 
-    var containerRect = themesContainer.getBoundingClientRect();
-    var pos = el.getBoundingClientRect();
+const themesContainer = document.querySelector("#theme_container");
+const switchHighlight = document.querySelector("#slider_highlight");
 
-    switchHighlight.style.left = (pos.left - containerRect.left) + "px";
-    switchHighlight.style.top = (pos.top - containerRect.top) + "px";
-  }
+const white = document.querySelector("#theme_default");
+const dark = document.querySelector("#theme_dark");
+const neon = document.querySelector("#theme_neon");
+const retro = document.querySelector("#theme_retro");
+const matrix = document.querySelector("#theme_matrix");
+const arctic = document.querySelector("#theme_arctic");
 
-  function applyTheme(el) {
-    if (!el) return;
-
-    document.body.classList.remove.apply(document.body.classList, themeClassList);
-    document.body.classList.add(el.id);
-
-    updateSwitchPos(el);
-  }
-function updateSwitchPos(currentElement){
+function updateSwitchPos(currentElement) {
   currentSelected = currentElement;
   let pos = currentElement.getBoundingClientRect();
 
-  switchHighlight.style.left = pos.left+"px";
-  switchHighlight.style.top = pos.top+"px";
+  switchHighlight.style.left = pos.left + "px";
+  switchHighlight.style.top = pos.top + "px";
 }
 
 let themes = [white, dark, neon, retro, matrix, arctic];
@@ -52,7 +40,7 @@ let currentSelected;
 
 themes.forEach(element => {
   element.addEventListener("click", (e) => {
-    
+
     document.body.className = ""; // empty all themes from body
     document.body.classList.add(element.id);
     updateSwitchPos(element);
@@ -66,66 +54,64 @@ window.addEventListener("resize", () => {
 updateSwitchPos(white);
 
 //--------------------------------------------------------------------
-const img = document.createElement("groovy");
+// does nothing
 
-  for (var i = 0; i < themes.length; i++) {
-    (function (el) {
-      if (!el) return;
+// for (var i = 0; i < themes.length; i++) {
+//   (function (el) {
+//     if (!el) return;
 
-      el.addEventListener("click", function () {
-        applyTheme(el);
-      });
-    })(themes[i]);
-  }
+//     el.addEventListener("click", function () {
+//       applyTheme(el);
+//     });
+//   })(themes[i]);
+// }
 
-  var defaultEl = document.querySelector("#theme_default");
-  updateSwitchPos(defaultEl);
+// not needed
+// var container = document.getElementById("groovycontainer");
 
-  var container = document.getElementById("groovycontainer");
+var img = document.createElement("img");
 
-  if (container) {
-    var img = document.createElement("img");
+img.src = "./css/groovy.png";
+img.alt = "groovy image";
+img.className = "groovy-image";
 
-    img.src = "./css/groovy.png";
-    img.alt = "groovy image";
-    img.style.width = "300px";
-    img.style.borderRadius = "10px";
-    img.className = "groovy-image";
+// set these in css
+// img.style.width = "300px";
+// img.style.borderRadius = "10px";
 
-    container.appendChild(img);
-  }
+document.body.appendChild(img);
 
-  var dvd = document.createElement("img");
-  dvd.src = "./css/groovy.png";
-  dvd.className = "dvd-logo";
-  zIndex = "-1";
 
-  document.body.appendChild(dvd);
+// duplicate
+// var img = document.createElement("img");
+// img.src = "./css/groovy.png";
+// img.className = "img-logo";
+// zIndex = "-1";
 
-  var x = 100;
-  var y = 100;
-  var dx = 1.2;
-  var dy = 1.0;
+var x = 100;
+var y = 100;
 
-  function animateDVD() {
-    var w = window.innerWidth;
-    var h = window.innerHeight;
+// depends on display resolution, bad solution
+// var dx = 1.2;
+// var dy = 1.0;
 
-    x += dx;
-    y += dy;
+function animateimg() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
 
-    if (x <= 0 || x + 120 >= w) dx *= -1;
-    if (y <= 0 || y + 60 >= h) dy *= -1;
+  x += dx;
+  y += dy;
 
-    dvd.style.left = x + "px";
-    dvd.style.top = y + "px";
-    dvd.style.position = "fixed";
-    dvd.style.width = "120px";
-    dvd.style.zIndex = "9999";
+  if (x <= 0 || x + 120 >= w) dx *= -1;
+  if (y <= 0 || y + 60 >= h) dy *= -1;
 
-    requestAnimationFrame(animateDVD);
-  }
+  img.style.left = x + "px";
+  img.style.top = y + "px";
+  img.style.position = "fixed";
+  img.style.width = "120px";
+  img.style.zIndex = "9999";
 
-  animateDVD();
+  requestAnimationFrame(animateimg);
+}
 
-});
+animateimg();

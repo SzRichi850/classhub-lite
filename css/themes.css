@@ -13,7 +13,13 @@ background: #1e1e1e;
 
     background: #2e3440;
     color: #d8dee9;
-    font-family: "Segoe UI", system-ui, sans-serif;
+}
+.theme_arctic .navbar {
+    background: linear-gradient(90deg, #3c4b67d9 0%, #2f3541d9 33%, #3c4b67d9 66%, #2f3541d9 100%);
+    background-size: 300%;
+    color: green;
+
+    animation: backgroundGradientShift 5s infinite linear;
 }
 .theme_arctic .post {
     background: #433D8B;
@@ -25,6 +31,9 @@ background: #1e1e1e;
 .theme_arctic .post:hover {
     border-color: #88c0d0;
     transform: translateY(-2px);
+}
+.theme_arctic .hero h2 {
+    color: #88c0d0;
 }
 
 .theme_neon {

@@ -37,6 +37,8 @@ let themes = [whitePos, darkPos, neonPos, retroPos, matrixPos, arcticPos];
 themes.forEach(element => {
   element.addEventListener("click", (e) => {
     let pos = element.getBoundingClientRect();
+    document.body.className = ""; // empty all themes from body
+    document.body.classList.add(element.id);
     updateSwitchPos(pos.left-5, pos.top);
   });
 });

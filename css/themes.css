@@ -2,51 +2,53 @@
     background: #121212;
     color: white;
 
-    > .post {
-    background: #1e1e1e;
 }
+.theme_dark .post {
+background: #1e1e1e;
 }
 
 .theme_arctic {
     background: #17153B;
     color: white;
 
-    > .post {
-        background: #433D8B;
-    }
+}
+.theme_arctic .post {
+    background: #433D8B;
 }
 
 .theme_neon {
     background: #1D2B53;
     color: #fff;
 
-    > .post {
-        background: #7E2553;
-    }
 }
+.theme_neon .post {
+    background: #7E2553;
+}
+
 .theme_retro {
     background: #ffae01;
     color: #333;
 
-    > .post {
-        background: #ff8f66;
-    }
+}
+.theme_retro .post {
+    background: #ff8f66;
 }
 
 .theme_matrix {
     background: #0f0f0f;
     color: #00ff00;
 
-    > .post {
-        background: #0a0a0a;
-    }
 }
+.theme_matrix .post {
+    background: #0a0a0a;
+}
+
 .theme_default {
     background: #f0f0f0;
     color: #000000;
-    .post {
-        background: #ffffff;
-    }
+}
+.theme_default .post {
+    background: #ffffff;
 }
 
 .themeSlider {

@@ -27,19 +27,28 @@ const retro = document.querySelector("#theme_retro");
 const matrix = document.querySelector("#theme_matrix");
 const arctic = document.querySelector("#theme_arctic");
 
-function updateSwitchPos(newPosX, newPosY){
-  switchHighlight.style.left = newPosX+"px";
-  switchHighlight.style.top = newPosY+"px";
+function updateSwitchPos(currentElement){
+  currentSelected = currentElement;
+  let pos = currentElement.getBoundingClientRect();
+
+  switchHighlight.style.left = pos.left+"px";
+  switchHighlight.style.top = pos.top+"px";
 }
 
 let themes = [white, dark, neon, retro, matrix, arctic];
+let currentSelected;
+
 themes.forEach(element => {
   element.addEventListener("click", (e) => {
-    let pos = element.getBoundingClientRect();
+    
     document.body.className = ""; // empty all themes from body
     document.body.classList.add(element.id);
-    updateSwitchPos(pos.left-5, pos.top);
+    updateSwitchPos(element);
   });
 });
 
-updateSwitchPos(white.left, white.top);
+window.addEventListener("resize", () => {
+  updateSwitchPos(currentSelected);
+});
+
+updateSwitchPos(white);

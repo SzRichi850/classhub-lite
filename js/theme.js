@@ -38,7 +38,9 @@ function updateSwitchPos(currentElement) {
 	if (currentElement.id == "theme_retro") {
 		isRetro = true;
 		groovyGen();
-	}
+	} else {
+    isRetro = false;
+  }
 
 	switchHighlight.style.left = pos.left + "px";
 	switchHighlight.style.top = pos.top + "px";
@@ -121,21 +123,39 @@ function groovyGen() {
 // img.className = "img-logo";
 // zIndex = "-1";
 
-// not needed
+// not what we need
 // var x = 100;
 // var y = 100;
+
+// -------------------------------------------------------
+// source: https://github.com/MicahThePro/DVD-Bounce/
 
 // step distance on axis
 let dx = 1.2;
 let dy = 1.0;
 
-function animateimg() {
-	if (!isRetro) {
-		return;
-	}
+// image size
 
-	img.style.left = 0 + "px";
-	img.style.top = 0 + "px";
+function animateimg() {
+  // remove groovy, stop animation
+	if (!isRetro) { 
+    document.getElementById("groovy-image").outerHTML = "";
+    return;
+	}
+  let imageLeft = parseInt(img.style.left);
+  let imageTop = parseInt(img.style.top);
+
+  // animation step
+  imageLeft += dx;
+  imageTop += dy;
+
+
+  // OoB(Out of Bounds) detection
+  if (imageLeft <= 0 || imageLeft + imageWidth >= pageWidth) dx = -dx;
+  if (imageTop <= 0 || imageTop + imageHeight >= pageHeight) dy = -dy;
+
+	img.style.left = imageLeft + "px";
+	img.style.top = imageTop + "px";
 
 	// set in css instead, not needed every frame
 	// img.style.position = "fixed";

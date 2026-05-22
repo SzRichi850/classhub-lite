@@ -1,7 +1,6 @@
 .theme_dark {
     background: #121212;
     color: white;
-
 }
 .theme_dark .post {
 background: #1e1e1e;
@@ -32,11 +31,22 @@ background: #1e1e1e;
     color: #88c0d0;
     border-bottom: 2px solid #88c0d0;
 }
+.theme_arctic .like-btn {
+    background: transparent;
+    border: 1px solid #88c0d0;
+    color: #d8dee9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.theme_arctic .like-btn:hover {
+    background: #88c0d0;
+    color: #2e3440;
+}
 
 .theme_neon {
     background: #1D2B53;
     color: #fff;
-
 }
 .theme_neon .post {
     background: #7E2553;

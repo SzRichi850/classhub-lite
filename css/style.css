@@ -126,6 +126,7 @@ body.dark .mode-ripple {
 body {
     transition:
         background-color 0.25s ease,
+        background-image 0.25s ease,
         color 0.2s ease 0.1s;
 }
 

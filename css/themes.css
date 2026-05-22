@@ -8,15 +8,11 @@ background: #1e1e1e;
 }
 
 .theme_arctic {
-    background: #17153B;
-    color: white;
-
     background: #2e3440;
     color: #d8dee9;
     font-family: "Segoe UI", system-ui, sans-serif;
 }
 .theme_arctic .post {
-    background: #433D8B;
     background: #3b4252;
     border: 1px solid #434c5e;
     border-radius: 12px;
@@ -43,12 +39,15 @@ background: #1e1e1e;
     background-repeat: repeat;
     background-size: cover  ;
 
+
+
     position: relative;
     z-index: 1;
 }
 
 .theme_retro .post {
-    background: #a0700a;
+    background: #adaaa4;
+ 
 }
 .theme_matrix {
     background: #0f0f0f;

@@ -1,4 +1,4 @@
-.dark-mode {
+.theme_dark {
     background: #121212;
     color: white;
 
@@ -7,7 +7,7 @@
 }
 }
 
-.northickde-mode {
+.theme_arctic {
     background: #17153B;
     color: white;
 
@@ -16,7 +16,7 @@
     }
 }
 
-neon-mode {
+.theme_neon {
     background: #1D2B53;
     color: #fff;
 
@@ -24,7 +24,7 @@ neon-mode {
         background: #7E2553;
     }
 }
-.retro-mode {
+.theme_retro {
     background: #ffae01;
     color: #333;
 
@@ -33,7 +33,7 @@ neon-mode {
     }
 }
 
-.matrix-mode {
+.theme_matrix {
     background: #0f0f0f;
     color: #00ff00;
 
@@ -41,7 +41,7 @@ neon-mode {
         background: #0a0a0a;
     }
 }
-.normal-mode {
+.theme_default {
     background: #f0f0f0;
     color: #000000;
     .post {

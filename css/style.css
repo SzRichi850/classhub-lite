@@ -10,6 +10,10 @@ body {
     color: #222;
 }
 
+main {
+    padding: 10px;
+}
+
 .hero {
     margin-bottom: 30px;
 }

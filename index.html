@@ -47,25 +47,27 @@
             <div class="post">
                 <h3>Osztálykirándulás</h3>
                 <p>Pénteken indulunk 8:00-kor.</p>
-                <input type="text" placeholder="Comment" class="comments">
-                <button class="comment-btn">Küldés</button>
+                <div class="comment-form">
+                    <textarea id="message" placeholder="Írj kommentet..."></textarea>
+                </div>
+                <button class="comment-btn" onclick="addComment()">Küldése</button>
                 <button class="like-btn">❤️ Like</button>
             </div>
-            <div class="comment">
 
-            </div>
+            <div class="comments" id="comments"></div>
 
             <div class="post">
                 <h3>Matek doga</h3>
                 <p>Ne felejtsétek el a holnapi dolgozatot.</p>
-                <input type="text" placeholder="Comment" class="comments">
-                <button class="comment-btn">Küldés</button>
+                <div class="comment-form">
+                    <textarea id="message" placeholder="Írj kommentet..."></textarea>
+                </div>
+                <button class="comment-btn" onclick="addComment()">Küldése</button>
                 <button class="like-btn">❤️ Like</button>
             </div>
 
-            <div class="comment">
-                <p class="comment-text">teszt</p>
-                <button class="delete-btn"></button>
+            <div class="comments" id="comments"></div>
+                
             </div>
         </section>
     </main>

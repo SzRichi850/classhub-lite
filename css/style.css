@@ -145,33 +145,13 @@ div {
     padding: 40px 20px;
 }
 
-.comments{
-    border: 2px solid transparent;
-    width: 15em;
-    height: 2.5em;
-    padding-left: 0.8em;
-    outline: none;
-    overflow: hidden;
-    background-color: #F3F3F3;
-    border-radius: 10px;
-    transition: all 0.5s;
-    margin-right: 15px;
-}
-
-.comments:hover, .comments:focus{
-    border: 2px solid #5d6872;
-    box-shadow: 0px 0px 0px 7px rgba(70, 66, 66, 0.349);
-    background-color: white;
-}
-
-.comment-btn{
+.comment-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
     border-radius: 99px;
     border: 1.5px solid var(--accent);
-    
     background: transparent;
     color: var(--accent);
     font-size: 0.88rem;
@@ -184,7 +164,7 @@ div {
         box-shadow 0.22s ease;
 }
 
-.comments-btn:hover{
+.comment-btn:hover{
     background: var(--accent);
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(44, 42, 41, 0.28);
@@ -194,18 +174,77 @@ div {
     transform: scale(0.93);
     box-shadow: none;
 }
+.comment-form{
+      display: inline-flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
+      width: 20%;
+    }
 
-.delete-btn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: rgb(255, 95, 95);
-    cursor: pointer;
-    border: 3px solid rgb(255, 201, 201);
-    transition-duration: 0.3s;
-}
+    input, textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    textarea{
+      resize: none;
+      height: 50px;
+    }
+
+    .comment{
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 12px;
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .comment h3{
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .comment p{
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .time{
+      font-size: 12px;
+      color: gray;
+      margin-top: 10px;
+    }
+
+    .delete-btn{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .delete-btn:hover{
+      background: darkred;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 

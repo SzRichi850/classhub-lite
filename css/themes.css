@@ -4,53 +4,49 @@
 
     > .post {
     background: #1e1e1e;
-    }
+}
 }
 
 .northickde-mode {
     background: #17153B;
     color: white;
-<<<<<<< HEAD
-    .post {
-=======
 
     > .post {
->>>>>>> 24b0973f4a9f8a754e49cff6b6226ec793d7789d
     background: #433D8B;
-    }
+}
 }
 
-}
 
 
 neon-mode {
     background: #1D2B53;
     color: #fff;
-}
-neon-mode .post {
+
+    > .post {
     background: #7E2553;
 }
-
+}
 .retro-mode {
     background: #ffae01;
     color: #333;
-}
-.retro-mode .post {
-    background: #ff8f66;
+
+    > .post {
+        background: #ff8f66;
+    }
 }
 
 .matrix-mode {
     background: #0f0f0f;
     color: #00ff00;
-}
-.matrix-mode .post {
-    background: #0a0a0a;
+
+    > .post {
+        background: #0a0a0a;
+    }
 }
 .normal-mode {
     background: #f0f0f0;
     color: #000000;
-}
-.normal-mode .post {
+ .post {
     background: #ffffff;
 }
 .themeSlider {
@@ -87,4 +83,4 @@ neon-mode .post {
     transition: 0.4s cubic-bezier(.68,-0.55,.27,1.55);
     z-index: 1;
     box-shadow: 0 5px 15px rgba(110, 37, 145, 0.5);
-}
+}}

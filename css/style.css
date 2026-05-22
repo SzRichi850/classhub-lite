@@ -10,9 +10,6 @@ body {
     color: #222;
 }
 
-main {
-}
-
 .hero {
     margin-bottom: 30px;
 }
@@ -144,3 +141,11 @@ div {
     justify-content: center;
     padding: 40px 20px;
 } 
+
+#cim, #alcim {
+    margin: 20px;
+}
+
+.posts {
+    margin: 20px;
+}

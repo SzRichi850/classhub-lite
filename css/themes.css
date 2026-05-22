@@ -26,11 +26,11 @@ background: #1e1e1e;
 }
 
 .theme_retro {
-    background-color: #000000;
+    /* background-color: #8383837c; */
     color: #333;
     background-image: url("css/crinkle.png");
     background-repeat: repeat;
-    background-size: cover;
+    /* background-size: cover; */
 }
 .retro-mode .post {
     background: #ff8f66;

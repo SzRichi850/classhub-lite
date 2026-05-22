@@ -39,6 +39,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateSwitchPos(el);
   }
+function updateSwitchPos(currentElement){
+  currentSelected = currentElement;
+  let pos = currentElement.getBoundingClientRect();
+
+  switchHighlight.style.left = pos.left+"px";
+  switchHighlight.style.top = pos.top+"px";
+}
+
+let themes = [white, dark, neon, retro, matrix, arctic];
+let currentSelected;
+
+themes.forEach(element => {
+  element.addEventListener("click", (e) => {
+    
+    document.body.className = ""; // empty all themes from body
+    document.body.classList.add(element.id);
+    updateSwitchPos(element);
+  });
+});
+
+window.addEventListener("resize", () => {
+  updateSwitchPos(currentSelected);
+});
+
+updateSwitchPos(white);
+
+//--------------------------------------------------------------------
+const img = document.createElement("groovy");
 
   for (var i = 0; i < themes.length; i++) {
     (function (el) {

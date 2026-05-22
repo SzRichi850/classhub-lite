@@ -10,9 +10,6 @@ body {
     color: #222;
 }
 
-main {
-}
-
 .hero {
     margin-bottom: 30px;
 }
@@ -317,4 +314,11 @@ body.dark-mode .card-skeleton {
 .skeleton-class.short {
     height: 40px;
     opacity: 0.8;
+
+#cim, #alcim {
+    margin: 20px;
+}
+
+.posts {
+    margin: 20px;
 }

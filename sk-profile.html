@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - ClassHub Lite</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h1 class="slideIn">ClassHub Lite</h1>
+
+    <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="profile.html" class="activepage">Profil</a></li>
+        <li><a href="gallery.html">Galéria</a></li>
+        <li><a href="events.html">Események</a></li>
+        <li><a href="timetable.html">Órarend</a></li>
+    </ul>
+
+    <div id="darkModeContainer">
+        <p>Dark Mode</p>
+        <button id="darkModeBtn">🌙</button>
+    </div>
+</nav>
+
+<main class="profile-wrapper">
+
+    <div class="profile-card">
+
+        <div class="avatar skeleton"></div>
+
+        <div class="skeleton skeleton-hero-title" style="width: 50%; margin: 15px auto;"></div>
+        
+        <div class="skeleton skeleton-post-text short" style="margin: 0 auto 15px auto; width: 30%;"></div>
+
+        <div class="divider"></div>
+
+        <div class="skeleton skeleton-post-title" style="width: 25%;"></div>
+        <div class="skeleton skeleton-post-text" style="width: 100%;"></div>
+        <div class="skeleton skeleton-post-text short" style="width: 75%;"></div>
+
+        <div class="divider"></div>
+
+        <div class="skeleton skeleton-post-title" style="width: 30%;"></div>
+        <div class="skeleton skeleton-post-text" style="width: 90%;"></div>
+        <div class="skeleton skeleton-post-text" style="width: 85%;"></div>
+        <div class="skeleton skeleton-post-text" style="width: 80%;"></div>
+
+        <div class="divider"></div>
+
+        <div class="skeleton skeleton-button" style="margin: 0 auto;"></div>
+
+    </div>
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+</main>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "profile.html";
+    }, 3000);
+</script>
+<script src="js/profile.js"></script>
+<script src="js/darkmode.js"></script>
+
+</body>
+</html>

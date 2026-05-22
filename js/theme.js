@@ -131,8 +131,8 @@ function groovyGen() {
 // source: https://github.com/MicahThePro/DVD-Bounce/
 
 // step distance on axis
-let dx = 1.2;
-let dy = 1.0;
+let dx = 2;
+let dy = 2;
 
 // image size
 

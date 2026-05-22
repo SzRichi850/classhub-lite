@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/themes.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,9 +19,17 @@
             <li><a href="events.html">Események</a></li>
             <li><a href="timetable.html">Órarend</a></li>
         </ul>
-        <div id="darkModeContainer">
-            <p>Dark Mode</p>
-            <button id="darkModeBtn">🌙</button>
+        <div id="themesContainer">
+            <!-- darkModeContainer -->
+            <div class="themeSlider" id="theme_container">
+                <div class="sliderHighlight" id="slider_highlight"></div>
+                <div class="themeOption" id="theme_default">🌙</div>
+                <div class="themeOption" id="theme_dark">🌙</div>
+                <div class="themeOption" id="theme_neon">🌙</div>
+                <div class="themeOption" id="theme_retro">🌙</div>
+                <div class="themeOption" id="theme_matrix">🌙</div>
+                <div class="themeOption" id="theme_arctic">🌙</div>
+            </div>
         </div>
     </nav>
 <script src="js/darkmode.js"></script>

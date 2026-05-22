@@ -27,12 +27,16 @@ neon-mode {
 }
 }
 .retro-mode {
-    background: #ffae01;
+    background-color: #ffae01;
     color: #333;
 
-    > .post {
-        background: #ff8f66;
-    }
+    background-image: url("css/crinkle.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.retro-mode .post {
+    background: #ff8f66;
 }
 
 .matrix-mode {

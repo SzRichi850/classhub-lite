@@ -1,19 +1,19 @@
 .dark-mode {
     background: #121212;
     color: white;
-}
 
-.dark-mode .post {
+    > .post {
     background: #1e1e1e;
+    }
 }
 
 .northickde-mode {
     background: #17153B;
     color: white;
-}
 
-.northickde-mode .post {
+    > .post {
     background: #433D8B;
+    }
 }
 
 neon-mode {

@@ -151,12 +151,12 @@
 }
 
 
-
-.groovycontainer {
+/* not needed */
+/* .groovycontainer {
     position: fixed;
     width: 120px;
     pointer-events: none;
 
     filter: drop-shadow(0 0 10px rgba(0,255,255,0.6));
     transition: filter 0.2s ease;
-}
+} */

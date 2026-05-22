@@ -27,35 +27,47 @@ const retro = document.querySelector("#theme_retro");
 const matrix = document.querySelector("#theme_matrix");
 const arctic = document.querySelector("#theme_arctic");
 
-function updateSwitchPos(currentElement) {
-  currentSelected = currentElement;
-  let pos = currentElement.getBoundingClientRect();
+// hook for groovy
+let isRetro = false;
 
-  switchHighlight.style.left = pos.left + "px";
-  switchHighlight.style.top = pos.top + "px";
+function updateSwitchPos(currentElement) {
+	currentSelected = currentElement;
+	let pos = currentElement.getBoundingClientRect();
+
+	// hook for groovy
+	if (currentElement.id == "theme_retro") {
+		isRetro = true;
+		groovyGen();
+	}
+
+	switchHighlight.style.left = pos.left + "px";
+	switchHighlight.style.top = pos.top + "px";
 }
 
 let themes = [white, dark, neon, retro, matrix, arctic];
 let currentSelected;
 
-themes.forEach(element => {
-  element.addEventListener("click", (e) => {
-
-    document.body.className = ""; // empty all themes from body
-    document.body.classList.add(element.id);
-    updateSwitchPos(element);
-  });
+themes.forEach((element) => {
+	element.addEventListener("click", (e) => {
+		document.body.className = ""; // empty all themes from body
+		document.body.classList.add(element.id);
+		updateSwitchPos(element);
+	});
 });
 
 window.addEventListener("resize", () => {
-  updateSwitchPos(currentSelected);
+	updateSwitchPos(currentSelected);
+
+	// updating screen size for groovy
+	pageWidth = window.screen.availWidth;
+	pageHeight = window.screen.availHeight;
 });
 
 updateSwitchPos(white);
 
 //--------------------------------------------------------------------
-// does nothing
 
+// does nothing
 // for (var i = 0; i < themes.length; i++) {
 //   (function (el) {
 //     if (!el) return;
@@ -69,18 +81,39 @@ updateSwitchPos(white);
 // not needed
 // var container = document.getElementById("groovycontainer");
 
-var img = document.createElement("img");
+let img; // init groovy
+let pageWidth = window.screen.availWidth;
+let pageHeight = window.screen.availHeight;
 
-img.src = "./css/groovy.png";
-img.alt = "groovy image";
-img.className = "groovy-image";
+function groovyGen() {
+	if (document.querySelector("#groovy-image") != null) {
+		// only one groovy
+		return 0;
+	}
 
-// set these in css
+	img = document.createElement("img");
+
+	img.src = "./css/groovy.png";
+	img.alt = "groovy image";
+	img.id = "groovy-image"; // there should only be one groovy [class --> id]
+
+	// get size
+	imageWidth = img.width;
+	imageHeight = img.height;
+
+	// initial position
+	img.style.left = (pageWidth / 2 - imageWidth / 2) + "px";
+	img.style.top = (pageHeight / 2 - imageHeight / 2) + "px";
+
+	document.body.appendChild(img);
+
+	//first animation frame
+	animateimg();
+}
+
+// not needed
 // img.style.width = "300px";
 // img.style.borderRadius = "10px";
-
-document.body.appendChild(img);
-
 
 // duplicate
 // var img = document.createElement("img");
@@ -88,30 +121,26 @@ document.body.appendChild(img);
 // img.className = "img-logo";
 // zIndex = "-1";
 
-var x = 100;
-var y = 100;
+// not needed
+// var x = 100;
+// var y = 100;
 
-// depends on display resolution, bad solution
-// var dx = 1.2;
-// var dy = 1.0;
+// step distance on axis
+let dx = 1.2;
+let dy = 1.0;
 
 function animateimg() {
-  var w = window.innerWidth;
-  var h = window.innerHeight;
+	if (!isRetro) {
+		return;
+	}
 
-  x += dx;
-  y += dy;
+	img.style.left = 0 + "px";
+	img.style.top = 0 + "px";
 
-  if (x <= 0 || x + 120 >= w) dx *= -1;
-  if (y <= 0 || y + 60 >= h) dy *= -1;
+	// set in css instead, not needed every frame
+	// img.style.position = "fixed";
+	// img.style.width = "120px";
+	// img.style.zIndex = "9999";
 
-  img.style.left = x + "px";
-  img.style.top = y + "px";
-  img.style.position = "fixed";
-  img.style.width = "120px";
-  img.style.zIndex = "9999";
-
-  requestAnimationFrame(animateimg);
+	requestAnimationFrame(animateimg);
 }
-
-animateimg();

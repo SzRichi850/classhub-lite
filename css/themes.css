@@ -20,6 +20,9 @@ background: #1e1e1e;
     color: green;
 
     animation: backgroundGradientShift 5s infinite linear;
+    > h1 {
+        color: #88c0d0;
+    }
 }
 .theme_arctic .post {
     background: #433D8B;

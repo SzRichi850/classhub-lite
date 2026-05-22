@@ -7,7 +7,14 @@ const posts = [
     { title: "spongyabob", content: "NEM HALLOMMMMM!", like: 0 }
 ];
 
-localStorage.setItem("posts", JSON.stringify(posts));
+
+
+
+let latta = JSON.parse(localStorage.getItem("seen"))
+if(!latta) {
+    localStorage.setItem("seen", JSON.stringify(true));
+    localStorage.setItem("posts", JSON.stringify(posts))
+}
 
 let posztok = JSON.parse(localStorage.getItem("posts"));
 
@@ -22,7 +29,7 @@ posztok.forEach((post, index) => {
         <h3 class="title">${post.title}</h3>
         <p class="content">${post.content}</p>
         <button class="like-btn">❤️ Like</button>
-        <p class="like">0</p>
+        <p class="like">${post.like}</p>
     `;
 
     postsSection.appendChild(postDiv);
@@ -44,7 +51,16 @@ posztok.forEach((post, index) => {
         }
 
         posztok[index].like = like_count;
-        localStorage.setItem("posts", JSON.stringify(posztok));
+        localStorage.setItem("posts", JSON.stringify(posztok));        
         likeCounter.innerHTML = like_count;
+        console.log(posztok)
     });
+
 });
+
+for (let i = 0, len = localStorage.length; i < len; ++i) {
+    var element = document.createElement("p")
+    element.textContent = localStorage.getItem(localStorage.key(i))
+    const output = document.getElementById("like");
+   
+}

@@ -1,7 +1,6 @@
 .theme_dark {
     background: #121212;
     color: white;
-
 }
 .theme_dark .post {
 background: #1e1e1e;
@@ -14,12 +13,9 @@ background: #1e1e1e;
 .theme_arctic .navbar {
     background: linear-gradient(90deg, #3c4b67d9 0%, #2f3541d9 33%, #3c4b67d9 66%, #2f3541d9 100%);
     background-size: 300%;
-    color: green;
+    color: #d8dee9;
 
     animation: backgroundGradientShift 5s infinite linear;
-    > h1 {
-        color: #88c0d0;
-    }
 }
 .theme_arctic .post {
     background: #3b4252;
@@ -31,25 +27,38 @@ background: #1e1e1e;
     border-color: #88c0d0;
     transform: translateY(-2px);
 }
-.theme_arctic .hero h2 {
+.theme_arctic .activepage {
     color: #88c0d0;
+    border-bottom: 2px solid #88c0d0;
+}
+.theme_arctic .like-btn {
+    background: transparent;
+    border: 1px solid #88c0d0;
+    color: #d8dee9;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.theme_arctic .like-btn:hover {
+    background: #88c0d0;
+    color: #2e3440;
 }
 
 .theme_neon {
     background: #1D2B53;
     color: #fff;
-
 }
 .theme_neon .post {
     background: #7E2553;
 }
 .theme_retro {
-    background-color: gray;
-    color: #333;
-
+    color: #31353f;
+    
     background-image: url("crinkle.jpg");
+    background-color:  	rgba(190,192,177, 0.8);
     background-repeat: repeat;
-    background-size: cover  ;
+    background-size: cover;
+    background-blend-mode:color-burn;
 
 
 

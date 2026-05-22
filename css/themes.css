@@ -1,17 +1,23 @@
 .dark-mode {
     background: #121212;
     color: white;
-}
 
-.dark-mode .post {
+    > .post {
     background: #1e1e1e;
+    }
 }
 
 .northickde-mode {
     background: #17153B;
     color: white;
+<<<<<<< HEAD
     .post {
+=======
+
+    > .post {
+>>>>>>> 24b0973f4a9f8a754e49cff6b6226ec793d7789d
     background: #433D8B;
+    }
 }
 
 }
